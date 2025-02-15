@@ -30,13 +30,14 @@ const {
   type = "website",
 } = Astro.props;
 
+// ✅ Fix: Ensure `ogimage` is properly formatted as an absolute URL
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
 const makeTitle = title
   ? title + " | " + "Earn Money Online Free"
   : "Earn Money Online Free — Side Hustles, Online Jobs, Passive Income Ideas";
 
-// Create schema markup for articles
+// ✅ Fix: Ensure JSON-LD Schema uses correct `image` URL
 const schema = frontmatter
   ? {
       "@context": "https://schema.org",
@@ -79,6 +80,22 @@ const schema = frontmatter
       name="keywords"
       content="earn money online free, make money online, passive income, side hustles, online jobs, internet income, work from home, digital income"
     />
+
+    <!-- ✅ Fix: Open Graph Meta Tags -->
+    <meta property="og:title" content={makeTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={resolvedOGImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+
+    <!-- ✅ Fix: Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={makeTitle} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={resolvedOGImage} />
+    <meta name="twitter:image:alt" content="Earn Money Online" />
 
     <SEO
       title={makeTitle}
@@ -125,6 +142,7 @@ const schema = frontmatter
     </script>
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
+
   <body class="bg-primary dark:bg-brand-primary">
     <Navbar />
     <slot />

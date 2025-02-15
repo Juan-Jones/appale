@@ -21,12 +21,18 @@ export function remarkReadingTime() {
   };
 }
 
-/** Check if an Image Path is Relative or Absolute */
+/** ✅ Improved Check if an Image Path is Relative or Absolute */
 export const checkImageUrl = (image, url) => {
+  if (!image || typeof image !== "string") {
+    return new URL("/opengraph.jpg", url).toString(); // ✅ Fallback image
+  }
+
   try {
-    new URL(image);
-    return image;
+    // ✅ Ensure valid absolute URL and encode special characters
+    const validUrl = new URL(image);
+    return encodeURI(validUrl.toString());
   } catch (error) {
-    return new URL(image, url).toString();
+    // ✅ Handle relative paths correctly
+    return encodeURI(new URL(image, url).toString());
   }
 };

@@ -6,7 +6,7 @@ import type { Props as Author } from "@data/author-types";
 import authors from "@data/authors.json";
 import type { Props as Category } from "@data/category-types";
 import categories from "@data/categories.json";
-import { getFormattedDate } from "@utils/all";
+import { getFormattedDate, checkImageUrl } from "@utils/all";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
@@ -26,15 +26,15 @@ const category = categories.find(
     <a href={"/blog/" + post.slug}>
       {
         post.data.image ? (
-          <Image
-            src={post.data.image}
-            alt={post.data.title}
-            width={400}
-            height={300}
-            loading={preloadImage ? "eager" : "lazy"}
-            class="absolute top-0 left-0 w-full h-full object-cover rounded-md"
-            title={post.data.title}
-          />
+        <Image
+          src={checkImageUrl(post.data.image, Astro.site)}
+          alt={post.data.title}
+          width={400}
+          height={300}
+          loading={preloadImage ? "eager" : "lazy"}
+          class="absolute top-0 left-0 w-full h-full object-cover rounded-md"
+          title={post.data.title}
+        />
         ) : (
           <span class="absolute w-16 h-16 text-zinc-200 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             <Icon
