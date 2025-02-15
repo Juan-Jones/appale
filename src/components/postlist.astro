@@ -62,17 +62,20 @@ const category = categories.find(
     </a>
   </h2>
 
-  <div class="hidden">
+  <div>
     {
       post.data.excerpt && (
         <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400 line-clamp-3">
           <a href={"/blog/" + post.slug} title={post.data.title}>
-            {post.data.excerpt}
+            {post.data.excerpt.length > 100
+              ? post.data.excerpt.slice(0, 100) + "..."
+              : post.data.excerpt}
           </a>
         </p>
       )
     }
   </div>
+  
 
   <div
     class="flex items-center mt-3 space-x-3 text-zinc-500 dark:text-zinc-400">

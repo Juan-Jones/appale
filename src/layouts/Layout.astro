@@ -33,8 +33,8 @@ const {
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
 const makeTitle = title
-  ? title + " | " + "Codingly"
-  : "Codingly — Blog for Developers";
+  ? title + " | " + "Earn Money Online Free"
+  : "Earn Money Online Free — Side Hustles, Online Jobs, Passive Income Ideas";
 
 // Create schema markup for articles
 const schema = frontmatter
@@ -52,7 +52,7 @@ const schema = frontmatter
       keywords: frontmatter.tags.join(","),
       publisher: {
         "@type": "Organization",
-        name: "Codingly",
+        name: "Earn Money Online",
         logo: {
           "@type": "ImageObject",
           url: `${Astro.site}favicon.svg`,
@@ -62,7 +62,7 @@ const schema = frontmatter
   : {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Codingly",
+      name: "Earn Money Online Free",
       url: Astro.site,
     };
 ---
@@ -77,17 +77,17 @@ const schema = frontmatter
     <meta name="generator" content={Astro.generator} />
     <meta
       name="keywords"
-      content="web development, programming, software engineering, coding"
+      content="earn money online free, make money online, passive income, side hustles, online jobs, internet income, work from home, digital income"
     />
 
     <SEO
       title={makeTitle}
       description={desc ||
-        "Codingly is a blog for developers. We write about web development, programming, and software engineering."}
+        "Ultimate guide to earn money online free. Find side hustles, passive income ideas, online jobs, and cash injections easily today."}
       canonical={canonicalURL}
       twitter={{
-        creator: "@stekatag",
-        site: "@stekatag",
+        creator: "@moneyonline_fre",
+        site: "@moneyonline_fre",
         card: "summary_large_image",
       }}
       openGraph={{
@@ -106,11 +106,23 @@ const schema = frontmatter
             }
           : undefined,
         image: {
-          alt: "Codingly screenshot",
+          alt: "Earn money online screenshot",
         },
       }}
     />
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9965740454699088" crossorigin="anonymous"></script>
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNQXNMRNBD"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-PNQXNMRNBD');
+    </script>
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body class="bg-primary dark:bg-brand-primary">

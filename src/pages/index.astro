@@ -5,7 +5,7 @@ import Link from "@components/ui/link.astro";
 import CategoryPosts from "@components/categoryposts.astro";
 import Layout from "@layouts/Layout.astro";
 import { latestPosts } from "@utils/content";
-import profileImage from "/public/authors/stefan.webp";
+import profileImage from "/public/income.webp";
 import categories from "@data/categories.json";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
@@ -13,7 +13,7 @@ import { Icon } from "astro-icon/components";
 
 <Layout
   title="Home"
-  desc="Welcome to Codingly blog. I'm Stefan, a web developer enthusiast and photographer.">
+  desc="Discover legitimate ways to earn money from home. Learn how to generate passive income, find online jobs, monetize websites and more. ">
   <Container>
     <header>
       <div
@@ -22,11 +22,11 @@ import { Icon } from "astro-icon/components";
           class="flex flex-col items-start w-full lg:w-1/2 max-lg:items-center">
           <h1
             class="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-            Hi, I'm Stefan.
+            Earn Money Online Free
           </h1>
           <p
             class="text-lg text-zinc-500 dark:text-zinc-400 text-center md:px-10 lg:text-left lg:px-0">
-            Welcome to my blog. I'm a web developer enthusiast and photographer.
+            Side Hustles, Online Jobs & Passive Income Ideas  
           </p>
           <nav
             class="flex flex-col gap-5 mt-5 w-full items-center sm:w-auto lg:flex-row lg:justify-center lg:gap-3"
@@ -37,37 +37,15 @@ import { Icon } from "astro-icon/components";
               <Icon name="mdi:post" class="dark:text-zinc-800 text-zinc-100" />
               <span>Blog</span>
             </Link>
-            <Link
-              href="/about"
-              style="outline"
-              class="w-full sm:w-auto flex items-center justify-center space-x-1">
-              <Icon
-                name="mdi:account"
-                class="dark:text-zinc-100 text-zinc-800"
-              />
-              <span>About</span>
-            </Link>
-            <Link
-              href="https://github.com/stekatag"
-              target="_blank"
-              style="outline"
-              class="w-full sm:w-auto flex items-center justify-center space-x-1.5">
-              <Icon
-                name="mdi:github"
-                class="dark:text-zinc-100 text-zinc-800"
-              />
-              <span>Github</span>
-            </Link>
           </nav>
         </div>
-
         <figure>
           <Image
             src={profileImage}
-            alt="Stefan Gogov"
+            alt="Online Income"
             width={300}
             height={300}
-            title="Stefan Gogov"
+            title="Online Income"
             loading="eager"
             class="rounded-full shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]"
           />

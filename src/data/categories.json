@@ -1,38 +1,50 @@
 [
   {
-    "title": "Design",
-    "slug": "design",
-    "color": "purple",
-    "description": "Get insights and inspiration from the world of design, with articles covering graphic design, product design, interior design, and more."
-  },
-  {
-    "title": "Lifestyle",
-    "slug": "lifestyle",
+    "title": "Blogging",
+    "slug": "blogging",
     "color": "orange",
-    "description": "Explore the latest trends and ideas in fashion, food, home design, and more, and get inspiration for living your best life."
+    "description": "Turn content into cash with SEO, monetization tactics, and audience-building techniques for a successful and scalable blog."
   },
   {
-    "title": "Personal",
-    "slug": "personal",
+    "title": "Online Business",
+    "slug": "ebiz",
+    "color": "pink",
+    "description": "Create a thriving online business with expert insights on branding, revenue streams, and sustainable growth in the digital space."
+  },
+  {
+    "title": "Ecommerce",
+    "slug": "ecommerce",
+    "color": "orange",
+    "description": "Launch and scale your online store with proven tactics for sales growth, marketing, and product optimization in the digital marketplace."
+  },
+  {
+    "title": "Freelancing",
+    "slug": "freelancing",
+    "color": "blue",
+    "description": "Earn money on your terms! Explore freelancing tips, high-demand skills, and expert strategies to build a profitable independent career."
+  },
+  {
+    "title": "Investment Strategies",
+    "slug": "investments",
+    "color": "green",
+    "description": "Grow wealth with smart investment moves, passive income methods, and financial planning for long-term stability."
+  },
+  {
+    "title": "Monetizing",
+    "slug": "monetizing",
+    "color": "purple",
+    "description": "Turn your skills and content into revenue with proven strategies for passive income, digital products, memberships, and online earnings."
+  },
+  {
+    "title": "Social Networking",
+    "slug": "networking",
     "color": "green",
     "description": "Discover tips and strategies for self-improvement, personal development, and achieving your goals, and find resources to help you grow as a person."
   },
   {
-    "title": "React",
-    "slug": "react",
-    "color": "blue",
-    "description": "Learn about the latest developments in React, including new and upcoming features, interviews with contributors, and more."
-  },
-  {
-    "title": "Technology",
-    "slug": "technology",
-    "color": "blue",
-    "description": "Keep up with the latest tech trends and learn about the latest innovations in software development, hardware design, cybersecurity, and more."
-  },
-  {
-    "title": "Travel",
-    "slug": "travel",
+    "title": "Side Hustles",
+    "slug": "sidehustles",
     "color": "pink",
-    "description": "Plan your next adventure and get travel tips and inspiration from experienced travelers, with articles covering destinations, cultures, and more."
+    "description": "Discover flexible side gigs that fit your schedule, boost income, and turn passions into profitable ventures with minimal startup costs."
   }
 ]
